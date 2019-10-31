@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to count</title>
+    <h1>Count page</h1>
+    <br>
+    <br>
+    <br>
+    Entered Sentence contains <strong>{{ wordcount }}</strong> words
+    <br />
+<table style="width:45%">
+  <tr>
+    <th>Word</th>
+    <th>count</th>
+  </tr>
+    {% for word , wc in wclist %}
+  <tr>
+    <td>{{ word }}</td>
+    <td>{{ wc }}</td>
+  </tr>
+    {% endfor %}
+<br />
+<br />
+<br />
+<br />
+<a href="{% url 'homepage' %}">Click to count new words</a>
+<br />
+<br />
+<br />
+<br />
+</head>
+<body>
+
+</body>
+</html>

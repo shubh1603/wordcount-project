@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to my Django Website</title>
+    <h1>Hola Amigos !! </h1>
+    {{ name }}
+    <form action="{% url 'count' %}">
+        <textarea cols="40" rows="10" name="fulltext"></textarea>
+        <br/>
+        <input type="SUBMIT" value="Count!" />
+    </form>
+</head>
+<body>
+<a href="{% url 'about' %}">About Me</a>
+</body>
+</html>
